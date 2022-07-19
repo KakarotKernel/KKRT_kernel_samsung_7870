@@ -1,0 +1,17 @@
+#kernel #Exy7870 #10-11-12
+<b>Kakarot-Kernel for Exynos7870 Devices</b>
+By: @Neel0210
+
+<b>Changelog</b>
+<code>• </b>
+• 
+• 
+• 
+• </code>
+
+<b>Note</b>
+• Flash everything at your own-risk
+
+<b>Support group</b>
+• @neelscosmos
+• @neelsdevelopment
