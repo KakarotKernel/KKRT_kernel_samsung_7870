@@ -271,10 +271,10 @@ else
 	echo "Not finding Toolchains at Home/toolchains; thus clonning them; would take some couple of minutes"
 	if [ -d "$VMTC" ]; then
 		echo exporting paths
-		export CROSS_COMPILE=$(pwd)/gcc/linaro/bin/aarch64-linux-gnu-
+		export CROSS_COMPILE=$(pwd)/gcc/bin/aarch64-linux-gnu-
 	else
 		git clone --depth=1 https://github.com/KakarotKernel/clang.git -b linaro gcc
-		export CROSS_COMPILE=$(pwd)/gcc/linaro/bin/aarch64-linux-gnu-
+		export CROSS_COMPILE=$(pwd)/gcc/bin/aarch64-linux-gnu-
 	fi
 fi
 
