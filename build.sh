@@ -11,7 +11,7 @@ export TC="/home/neel/Desktop/toolchain/linaro/bin"
 export VMTC="$(pwd)/gcc/linaro"
 
 #
-export CROSS_COMPILE=
+#export CROSS_COMPILE=
 export ANDROID_MAJOR_VERSION=q
 export ANDROID_PLATFORM_VERSION=10
 
@@ -309,11 +309,35 @@ if [ $n -eq 1 ]; then
 fi
 
 if [ $n -eq 2 ]; then
-	CLEAN
-	START
-	MAKE
-	PACKALL
-	END
+	echo " " && echo " "
+	echo "Select build type"
+	echo "1 = Clean build all"
+	echo "2 = Test Build"
+	echo "3 = Production build"
+	read n
+	#
+	if [ $n -eq 1 ]; then
+		CLEAN
+		START
+		MAKE
+		END
+	fi
+	#
+	if [ $n -eq 2 ]; then
+		CLEAN
+		START
+		make $J701 O=J701
+		make -j$(nproc --all) O=J701
+	fi
+	#
+	if [ $n -eq 3 ]; then
+		CLEAN
+		START
+		MAKE
+		PACKALL
+		END
+	fi	
+	#	
 fi
 
 if [ $n -eq 3 ]; then
